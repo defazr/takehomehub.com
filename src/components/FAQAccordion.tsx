@@ -1,22 +1,30 @@
-// FAQAccordion — placeholder component
-// Will be connected in Phase 4 when FAQ data is extracted from markdown
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+import type { FAQ } from "@/lib/markdown";
 
-export interface FAQItem {
-  question: string;
-  answer: string;
-}
+export default function FAQAccordion({ faq }: { faq: FAQ[] }) {
+  if (faq.length === 0) return null;
 
-export default function FAQAccordion({ items }: { items: FAQItem[] }) {
   return (
-    <div>
-      {items.map((item, i) => (
-        <details key={i} className="mb-4">
-          <summary className="cursor-pointer font-semibold">
-            {item.question}
-          </summary>
-          <p className="mt-2 text-sm">{item.answer}</p>
-        </details>
-      ))}
+    <div className="my-8">
+      <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+      <Accordion>
+        {faq.map((item, i) => (
+          <AccordionItem key={i} value={`faq-${i}`}>
+            <AccordionTrigger>{item.question}</AccordionTrigger>
+            <AccordionContent>
+              <div
+                className="prose prose-sm max-w-none"
+                dangerouslySetInnerHTML={{ __html: item.answer }}
+              />
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
     </div>
   );
 }

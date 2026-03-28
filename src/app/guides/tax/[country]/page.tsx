@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { getGuideBySlug, getAllGuides } from "@/lib/markdown";
 import CountryLinks from "@/components/CountryLinks";
 import Disclaimer from "@/components/Disclaimer";
+import ScenarioCard from "@/components/ScenarioCard";
+import FAQAccordion from "@/components/FAQAccordion";
 
 export async function generateStaticParams() {
   const slugs = getAllGuides();
@@ -20,7 +22,7 @@ export default async function Page({
     notFound();
   }
 
-  const { contentHtml, frontmatter } = guide;
+  const { contentHtml, frontmatter, sections } = guide;
 
   return (
     <main className="prose mx-auto py-10 px-4">
@@ -30,6 +32,10 @@ export default async function Page({
       </p>
 
       <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
+
+      <ScenarioCard scenarios={sections.scenarios} />
+
+      <FAQAccordion faq={sections.faq} />
 
       <CountryLinks currentCountry={frontmatter.country} />
 

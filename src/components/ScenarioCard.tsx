@@ -1,25 +1,31 @@
-// ScenarioCard — placeholder component
-// Will be connected in Phase 4 when scenario data is extracted from markdown
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import type { Scenario } from "@/lib/markdown";
 
-export interface ScenarioData {
-  monthlyIncome: string;
-  annualIncome: string;
-  seTax: string;
-  federalTax: string;
-  totalTax: string;
-  takeHome: string;
-  retention: string;
-}
+export default function ScenarioCard({
+  scenarios,
+}: {
+  scenarios: Scenario[];
+}) {
+  if (scenarios.length === 0) return null;
 
-export default function ScenarioCard({ data }: { data: ScenarioData }) {
   return (
-    <div className="border rounded-lg p-4 mb-4">
-      <h3 className="font-semibold">{data.monthlyIncome}/month</h3>
-      <p>Annual: {data.annualIncome}</p>
-      <p>SE Tax: {data.seTax}</p>
-      <p>Federal Tax: {data.federalTax}</p>
-      <p>Total Tax: {data.totalTax}</p>
-      <p className="font-bold">Take-Home: {data.takeHome} ({data.retention})</p>
+    <div className="my-8 space-y-6">
+      <h2 className="text-2xl font-bold">
+        Take-Home Scenarios: $1k / $5k / $20k per Month
+      </h2>
+      {scenarios.map((scenario, i) => (
+        <Card key={i}>
+          <CardHeader>
+            <CardTitle>{scenario.title}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div
+              className="prose prose-sm max-w-none"
+              dangerouslySetInnerHTML={{ __html: scenario.contentHtml }}
+            />
+          </CardContent>
+        </Card>
+      ))}
     </div>
   );
 }
