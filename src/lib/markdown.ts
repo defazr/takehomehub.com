@@ -17,7 +17,9 @@ export async function getGuideBySlug(slug: string) {
   const { data, content } = matter(fileContents);
 
   const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
+  const contentHtml = processedContent
+    .toString()
+    .replace(/<h1[^>]*>.*?<\/h1>/, "");
 
   return {
     contentHtml,

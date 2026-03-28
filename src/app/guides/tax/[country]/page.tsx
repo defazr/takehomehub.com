@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import { getGuideBySlug, getAllGuides } from "@/lib/markdown";
+import CountryLinks from "@/components/CountryLinks";
+import Disclaimer from "@/components/Disclaimer";
 
 export async function generateStaticParams() {
   const slugs = getAllGuides();
@@ -26,7 +28,12 @@ export default async function Page({
       <p className="text-sm text-gray-500">
         Last updated: {frontmatter.lastUpdated}
       </p>
+
       <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
+
+      <CountryLinks currentCountry={frontmatter.country} />
+
+      <Disclaimer />
     </main>
   );
 }
