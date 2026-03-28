@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(npx:*)",
+      "Bash(mv .git /tmp/.git_backup)",
+      "Bash(mv .claude /tmp/.claude_backup)"
+    ]
+  }
+}
