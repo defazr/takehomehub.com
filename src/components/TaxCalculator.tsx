@@ -100,66 +100,78 @@ export default function TaxCalculator() {
 
   return (
     <div className="not-prose">
-      <div className="grid gap-4 sm:grid-cols-2 mb-8">
-        <div>
-          <label className="block text-sm font-medium mb-1">
-            Monthly Income ({config.currency})
-          </label>
-          <input
-            type="number"
-            value={monthly}
-            onChange={(e) => setMonthly(e.target.value)}
-            placeholder="e.g. 5000"
-            className="w-full rounded-md border px-3 py-2 text-sm"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Country</label>
-          <select
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-            className="w-full rounded-md border px-3 py-2 text-sm"
-          >
-            {Object.entries(countries).map(([key, c]) => (
-              <option key={key} value={key}>
-                {c.label}
-              </option>
-            ))}
-          </select>
+      <div className="rounded-xl border border-[#E2E8F0] bg-white p-6 mb-8">
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+              Monthly Income ({config.currency})
+            </label>
+            <input
+              type="number"
+              value={monthly}
+              onChange={(e) => setMonthly(e.target.value)}
+              placeholder="e.g. 5000"
+              className="w-full rounded-lg border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent transition-all"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+              Country
+            </label>
+            <select
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+              className="w-full rounded-lg border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent transition-all cursor-pointer"
+            >
+              {Object.entries(countries).map(([key, c]) => (
+                <option key={key} value={key}>
+                  {c.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
 
       {monthlyNum > 0 && (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-lg border p-4 shadow-sm">
-            <p className="text-sm text-muted-foreground">Annual Income</p>
-            <p className="text-2xl font-bold">
+          <div className="rounded-xl border border-[#E2E8F0] bg-white p-5">
+            <p className="text-xs font-medium text-[#64748B] uppercase tracking-wide mb-1">
+              Annual Income
+            </p>
+            <p className="text-2xl font-bold text-[#0F172A]">
               {config.currency}
               {formatNumber(annual)}
             </p>
           </div>
-          <div className="rounded-lg border p-4 shadow-sm">
-            <p className="text-sm text-muted-foreground">Estimated Tax</p>
-            <p className="text-2xl font-bold">
+          <div className="rounded-xl border border-[#E2E8F0] bg-white p-5">
+            <p className="text-xs font-medium text-[#64748B] uppercase tracking-wide mb-1">
+              Estimated Tax
+            </p>
+            <p className="text-2xl font-bold text-[#DC2626]">
               {config.currency}
               {formatNumber(totalTax)}
             </p>
           </div>
-          <div className="rounded-lg border p-4 shadow-sm">
-            <p className="text-sm text-muted-foreground">Take-Home</p>
-            <p className="text-2xl font-bold">
+          <div className="rounded-xl border border-[#E2E8F0] bg-white p-5">
+            <p className="text-xs font-medium text-[#64748B] uppercase tracking-wide mb-1">
+              Take-Home
+            </p>
+            <p className="text-2xl font-bold text-[#16A34A]">
               {config.currency}
               {formatNumber(takeHome)}
             </p>
           </div>
-          <div className="rounded-lg border p-4 shadow-sm">
-            <p className="text-sm text-muted-foreground">Retention</p>
-            <p className="text-2xl font-bold">{retention}%</p>
+          <div className="rounded-xl border border-[#E2E8F0] bg-white p-5">
+            <p className="text-xs font-medium text-[#64748B] uppercase tracking-wide mb-1">
+              Retention
+            </p>
+            <p className="text-2xl font-bold text-[#CA8A04]">{retention}%</p>
           </div>
         </div>
       )}
 
-      <p className="text-xs text-muted-foreground mt-4">
+      <p className="text-xs text-[#94A3B8] mt-5">
         Estimates based on simplified effective tax rates from each country
         guide. Actual taxes may vary based on deductions, filing status, and
         local regulations. See the full guide for your country for detailed

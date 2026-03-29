@@ -100,9 +100,9 @@ export default async function Page({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <main className="prose mx-auto py-12 px-4 max-w-3xl">
+      <main className="prose mx-auto py-12 px-4 max-w-4xl">
         <h1>{frontmatter.title}</h1>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-[#64748B] font-medium">
           Last updated: {frontmatter.lastUpdated}
         </p>
 

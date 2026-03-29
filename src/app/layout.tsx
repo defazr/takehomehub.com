@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lexend, Source_Sans_3 } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lexend = Lexend({
+  variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sourceSans = Source_Sans_3({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -45,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${lexend.variable} ${sourceSans.variable} h-full antialiased`}
     >
       {GA_ID && (
         <>
@@ -63,24 +65,29 @@ export default function RootLayout({
           </Script>
         </>
       )}
-      <body className="min-h-full flex flex-col">
-        <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 py-3">
-          <div className="mx-auto max-w-3xl flex items-center gap-5 text-sm font-medium">
-            <Link href="/" className="font-bold text-base mr-2 hover:no-underline">
+      <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#020617]">
+        <nav className="sticky top-0 z-50 border-b border-[#E2E8F0] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 px-4 py-3">
+          <div className="mx-auto max-w-4xl flex items-center gap-6 text-sm">
+            <Link
+              href="/"
+              className="font-heading font-bold text-lg text-[#0F172A] hover:no-underline tracking-tight"
+            >
               TakeHomeHub
             </Link>
-            <Link
-              href="/compare/youtube-tax-by-country"
-              className="hover:underline"
-            >
-              Compare
-            </Link>
-            <Link
-              href="/calculators/youtube-earnings-after-tax"
-              className="hover:underline"
-            >
-              Calculator
-            </Link>
+            <div className="flex gap-5 font-medium text-[#475569]">
+              <Link
+                href="/compare/youtube-tax-by-country"
+                className="hover:text-[#0F172A] transition-colors duration-200"
+              >
+                Compare
+              </Link>
+              <Link
+                href="/calculators/youtube-earnings-after-tax"
+                className="hover:text-[#0F172A] transition-colors duration-200"
+              >
+                Calculator
+              </Link>
+            </div>
           </div>
         </nav>
         {children}

@@ -9,18 +9,23 @@ export default function ScenarioCard({
   if (scenarios.length === 0) return null;
 
   return (
-    <div className="not-prose mt-10 mb-8 space-y-5">
-      <h2 className="text-2xl font-semibold tracking-tight">
-        Take-Home Scenarios: $1k / $5k / $20k per Month
+    <div className="not-prose mt-12 mb-10 space-y-5">
+      <h2 className="font-heading text-[1.625rem] font-semibold tracking-tight text-[#0F172A] pb-2 border-b border-[#E2E8F0]">
+        Take-Home Scenarios
       </h2>
       {scenarios.map((scenario, i) => (
-        <Card key={i} className="shadow-sm">
-          <CardHeader>
-            <CardTitle>{scenario.title}</CardTitle>
+        <Card
+          key={i}
+          className="border-[#E2E8F0] bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
+        >
+          <CardHeader className="pb-2">
+            <CardTitle className="font-heading text-lg text-[#0F172A]">
+              {scenario.title}
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div
-              className="prose prose-sm max-w-none"
+              className="prose prose-sm max-w-none text-[#334155]"
               dangerouslySetInnerHTML={{ __html: scenario.contentHtml }}
             />
           </CardContent>
