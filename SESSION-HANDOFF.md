@@ -6,7 +6,7 @@
 
 1. 이 파일 읽기
 2. `PROJECT_SPEC.md` 읽기
-3. 최신 핸드오프: `GPT-HANDOFF-2026-03-29-v5.md`
+3. 최신 핸드오프: `GPT-HANDOFF-2026-03-29-v6.md`
 
 ---
 
@@ -15,17 +15,17 @@
 - **라이브**: https://takehomehub.com
 - **Console 에러**: 0
 - **11 페이지**
-- **Git**: `7162d1c` on main
-- **AdSense**: 코드 배포됨, Google 인증 실패 상태 (확인 필요)
+- **Git**: `87ec7d1` on main
+- **Phase 16**: 완료 (HTTP 200 = 11/11, 404 = 0, 링크 정상)
+- **AdSense**: ads.txt + meta tag 배포됨 → Google 검토 요청 가능 상태
 
 ---
 
 ## 즉시 해야 할 것
 
-### Phase 16 — Site Integrity Check
-- 전체 11 URL HTTP 200 확인 (curl)
-- 내부 링크 클릭 검증
-- AdSense 스크립트 프로덕션 로딩 확인
+### AdSense 승인 대기
+- Google AdSense에서 "검토 요청" 클릭
+- 승인 후 운영 전략 단계 진입
 
 ---
 
@@ -56,12 +56,13 @@
 | 파일 | 역할 |
 |---|---|
 | `src/components/GoogleAnalytics.tsx` | GA4 (useEffect) |
-| `src/components/GoogleAdSense.tsx` | AdSense (useEffect) |
+| `src/components/GoogleAdSense.tsx` | AdSense (useEffect) — 건드리지 않는다 |
 | `src/components/Footer.tsx` | 3단 Footer |
 | `src/components/MobileMenu.tsx` | 햄버거 (Sheet/Base UI) |
 | `src/components/TaxCalculator.tsx` | 계산기 + 국가 가이드 링크 |
 | `public/og-image.png` | OG 이미지 (1200x630) |
 | `public/favicon.ico` | Favicon |
+| `public/ads.txt` | AdSense 소유권 확인용 |
 
 ---
 
