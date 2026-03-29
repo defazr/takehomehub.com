@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="prose mx-auto py-10 px-4">
+    <main className="prose mx-auto py-12 px-4 max-w-3xl">
       <h1>YouTube Creator Taxes by Country</h1>
       <p>
         Understand how YouTube income is taxed globally. Compare tax rates,

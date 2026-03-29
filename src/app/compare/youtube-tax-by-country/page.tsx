@@ -81,7 +81,7 @@ export default function ComparePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-    <main className="prose mx-auto py-10 px-4">
+    <main className="prose mx-auto py-12 px-4 max-w-3xl">
       <h1>YouTube Withholding Rates by Country</h1>
       <p>
         How much do YouTube creators actually take home after taxes? The answer

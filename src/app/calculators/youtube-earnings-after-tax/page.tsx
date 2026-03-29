@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function CalculatorPage() {
   return (
-    <main className="prose mx-auto py-10 px-4">
+    <main className="prose mx-auto py-12 px-4 max-w-3xl">
       <h1>YouTube Earnings After Tax Calculator</h1>
       <p>
         Enter your monthly YouTube income and select your country to estimate

@@ -45,8 +45,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <nav className="border-b px-4 py-3">
-          <div className="mx-auto max-w-prose flex gap-6 text-sm font-medium">
+        <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 py-3">
+          <div className="mx-auto max-w-3xl flex gap-5 text-sm font-medium">
             <Link href="/" className="hover:underline">
               Home
             </Link>
@@ -55,6 +55,12 @@ export default function RootLayout({
               className="hover:underline"
             >
               Compare
+            </Link>
+            <Link
+              href="/calculators/youtube-earnings-after-tax"
+              className="hover:underline"
+            >
+              Calculator
             </Link>
           </div>
         </nav>
