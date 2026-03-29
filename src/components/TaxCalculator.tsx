@@ -171,11 +171,19 @@ export default function TaxCalculator() {
         </div>
       )}
 
-      <p className="text-xs text-[#94A3B8] mt-5">
+      {monthlyNum > 0 && (
+        <a
+          href={`/guides/tax/${country}`}
+          className="inline-block mt-5 text-sm font-medium text-[#1E3A8A] hover:underline"
+        >
+          → See detailed {config.label} tax guide
+        </a>
+      )}
+
+      <p className="text-xs text-[#94A3B8] mt-3">
         Estimates based on simplified effective tax rates from each country
         guide. Actual taxes may vary based on deductions, filing status, and
-        local regulations. See the full guide for your country for detailed
-        calculations.
+        local regulations.
       </p>
     </div>
   );
