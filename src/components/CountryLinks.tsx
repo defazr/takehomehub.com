@@ -3,7 +3,7 @@ import Link from "next/link";
 const countries = [
   { slug: "us", label: "YouTube Tax USA Guide", ready: true },
   { slug: "germany", label: "YouTube Tax Germany Guide", ready: true },
-  { slug: "canada", label: "YouTube Tax Canada Guide", ready: false },
+  { slug: "canada", label: "YouTube Tax Canada Guide", ready: true },
   { slug: "uk", label: "YouTube Tax UK Guide", ready: false },
   { slug: "india", label: "YouTube Tax India Guide", ready: false },
 ];
