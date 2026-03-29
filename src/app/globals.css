@@ -142,7 +142,7 @@
   --tw-prose-body: #020617;
   --tw-prose-headings: #0F172A;
   --tw-prose-links: #1E3A8A;
-  max-width: 52rem;
+  max-width: none;
 }
 
 .prose h1 {
