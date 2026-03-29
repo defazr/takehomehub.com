@@ -104,10 +104,33 @@ export default function AboutPage() {
         information found here.
       </p>
 
+      <h2>Explore</h2>
+      <ul>
+        <li>
+          <Link href="/compare/youtube-tax-by-country">
+            Compare YouTube Tax Rates by Country
+          </Link>
+        </li>
+        <li>
+          <Link href="/calculators/youtube-earnings-after-tax">
+            YouTube Earnings After Tax Calculator
+          </Link>
+        </li>
+        <li>
+          <Link href="/glossary">YouTube Tax Glossary</Link>
+        </li>
+      </ul>
+
       <h2>Contact</h2>
       <p>For questions, corrections, or feedback:</p>
       <p>
-        <strong>Email:</strong> takehomehub@protonmail.com
+        <strong>Email:</strong>{" "}
+        <a
+          href="mailto:takehomehub@protonmail.com"
+          className="text-[#1E3A8A] hover:underline"
+        >
+          takehomehub@protonmail.com
+        </a>
       </p>
     </main>
   );
