@@ -5,7 +5,7 @@ const countries = [
   { slug: "germany", label: "YouTube Tax Germany Guide", ready: true },
   { slug: "canada", label: "YouTube Tax Canada Guide", ready: true },
   { slug: "uk", label: "YouTube Tax UK Guide", ready: true },
-  { slug: "india", label: "YouTube Tax India Guide", ready: false },
+  { slug: "india", label: "YouTube Tax India Guide", ready: true },
 ];
 
 export default function CountryLinks({
