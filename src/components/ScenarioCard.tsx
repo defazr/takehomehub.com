@@ -14,7 +14,7 @@ export default function ScenarioCard({
         Take-Home Scenarios: $1k / $5k / $20k per Month
       </h2>
       {scenarios.map((scenario, i) => (
-        <Card key={i}>
+        <Card key={i} className="shadow-sm">
           <CardHeader>
             <CardTitle>{scenario.title}</CardTitle>
           </CardHeader>

@@ -46,9 +46,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 py-3">
-          <div className="mx-auto max-w-3xl flex gap-5 text-sm font-medium">
-            <Link href="/" className="hover:underline">
-              Home
+          <div className="mx-auto max-w-3xl flex items-center gap-5 text-sm font-medium">
+            <Link href="/" className="font-bold text-base mr-2 hover:no-underline">
+              TakeHomeHub
             </Link>
             <Link
               href="/compare/youtube-tax-by-country"

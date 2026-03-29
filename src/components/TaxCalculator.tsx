@@ -131,28 +131,28 @@ export default function TaxCalculator() {
 
       {monthlyNum > 0 && (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-lg border p-4">
+          <div className="rounded-lg border p-4 shadow-sm">
             <p className="text-sm text-muted-foreground">Annual Income</p>
             <p className="text-2xl font-bold">
               {config.currency}
               {formatNumber(annual)}
             </p>
           </div>
-          <div className="rounded-lg border p-4">
+          <div className="rounded-lg border p-4 shadow-sm">
             <p className="text-sm text-muted-foreground">Estimated Tax</p>
             <p className="text-2xl font-bold">
               {config.currency}
               {formatNumber(totalTax)}
             </p>
           </div>
-          <div className="rounded-lg border p-4">
+          <div className="rounded-lg border p-4 shadow-sm">
             <p className="text-sm text-muted-foreground">Take-Home</p>
             <p className="text-2xl font-bold">
               {config.currency}
               {formatNumber(takeHome)}
             </p>
           </div>
-          <div className="rounded-lg border p-4">
+          <div className="rounded-lg border p-4 shadow-sm">
             <p className="text-sm text-muted-foreground">Retention</p>
             <p className="text-2xl font-bold">{retention}%</p>
           </div>
