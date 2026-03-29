@@ -20,13 +20,27 @@ export default function CalculatorPage() {
 
       <TaxCalculator />
 
-      <h2>How This Calculator Works</h2>
+      <h2>How This YouTube Earnings After Tax Calculator Works</h2>
       <p>
-        This calculator uses effective tax rates based on the detailed
-        step-by-step calculations in each country guide. The rates account for
-        income tax, self-employment tax (or equivalent), and mandatory
-        contributions specific to each country. It does not include state or
-        provincial taxes, VAT/GST, or business deductions.
+        This youtube earnings after tax calculator uses effective tax rates
+        derived from detailed step-by-step calculations in each country guide.
+        The rates account for income tax, self-employment tax (or equivalent
+        such as CPP in Canada or National Insurance in the UK), and mandatory
+        contributions specific to each country.
+      </p>
+      <p>
+        The calculator interpolates between three real data points — low,
+        mid, and high income scenarios — to estimate your effective tax rate
+        at any income level. These data points come directly from official
+        government tax rates: IRS (US), Bundesfinanzministerium (Germany),
+        CRA (Canada), HMRC (UK), and the Income Tax Department of India.
+      </p>
+      <p>
+        Note: This tool provides estimates only. It does not include state or
+        provincial taxes, VAT/GST, business deductions, or special filing
+        statuses. For precise calculations, consult a qualified tax
+        professional in your country. See the full guide for your country for
+        detailed step-by-step breakdowns at specific income levels.
       </p>
 
       <h2>Country Guides</h2>

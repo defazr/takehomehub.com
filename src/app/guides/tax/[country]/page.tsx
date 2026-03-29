@@ -6,6 +6,14 @@ import Disclaimer from "@/components/Disclaimer";
 import ScenarioCard from "@/components/ScenarioCard";
 import FAQAccordion from "@/components/FAQAccordion";
 
+const countryNames: Record<string, string> = {
+  us: "United States",
+  germany: "Germany",
+  canada: "Canada",
+  uk: "United Kingdom",
+  india: "India",
+};
+
 export async function generateStaticParams() {
   const slugs = getAllGuides();
   return slugs.map((slug) => ({ country: slug }));
@@ -42,23 +50,72 @@ export default async function Page({
   }
 
   const { contentHtml, frontmatter, sections } = guide;
+  const displayName = countryNames[country] || country;
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: sections.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://takehomehub.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tax Guides",
+        item: "https://takehomehub.com/compare/youtube-tax-by-country",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: displayName,
+        item: `https://takehomehub.com/guides/tax/${country}`,
+      },
+    ],
+  };
 
   return (
-    <main className="prose mx-auto py-10 px-4">
-      <h1>{frontmatter.title}</h1>
-      <p className="text-sm text-gray-500">
-        Last updated: {frontmatter.lastUpdated}
-      </p>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <main className="prose mx-auto py-10 px-4">
+        <h1>{frontmatter.title}</h1>
+        <p className="text-sm text-gray-500">
+          Last updated: {frontmatter.lastUpdated}
+        </p>
 
-      <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
-      <ScenarioCard scenarios={sections.scenarios} />
+        <ScenarioCard scenarios={sections.scenarios} />
 
-      <FAQAccordion faq={sections.faq} />
+        <FAQAccordion faq={sections.faq} />
 
-      <CountryLinks currentCountry={frontmatter.country} />
+        <CountryLinks currentCountry={frontmatter.country} />
 
-      <Disclaimer />
-    </main>
+        <Disclaimer />
+      </main>
+    </>
   );
 }

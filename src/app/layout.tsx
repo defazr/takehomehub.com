@@ -17,6 +17,21 @@ export const metadata: Metadata = {
   title: "TakeHomeHub — YouTube Creator Taxes by Country",
   description:
     "Understand how YouTube income is taxed globally. Compare tax rates, withholding, and take-home pay for YouTube creators across countries.",
+  openGraph: {
+    title: "TakeHomeHub — YouTube Creator Taxes by Country",
+    description:
+      "Compare YouTube tax rates, withholding, and take-home pay across the US, Germany, Canada, UK, and India.",
+    url: "https://takehomehub.com",
+    siteName: "TakeHomeHub",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TakeHomeHub — YouTube Creator Taxes by Country",
+    description:
+      "Compare YouTube tax rates and take-home pay across 5 countries.",
+  },
 };
 
 export default function RootLayout({

@@ -8,8 +8,79 @@ export const metadata: Metadata = {
     "Compare YouTube tax rates, withholding, and take-home pay across the US, Germany, Canada, UK, and India. Real data from official tax authorities.",
 };
 
+const faqData = [
+  {
+    question: "Which country has the lowest YouTube tax?",
+    answer:
+      "India has the lowest effective tax rate for YouTube creators, primarily due to presumptive taxation under Section 44ADA, which allows creators to declare only 50% of gross receipts as taxable profit. At ₹60 lakh annual income, the effective rate is only about 8%.",
+  },
+  {
+    question:
+      "Do I pay US tax on YouTube income if I live outside the US?",
+    answer:
+      "Only on the portion of your income from US viewers. Google withholds US tax on this US-sourced portion. The rate depends on whether you submit a W-8BEN form and whether your country has a tax treaty with the US. Most major countries (UK, Germany, Canada) have 0% treaty rates. India's treaty rate is 15%.",
+  },
+  {
+    question: "What is withholding tax on YouTube income?",
+    answer:
+      "Withholding tax is the amount Google deducts from your AdSense payments before sending them to you. For US creators, there is no withholding — you pay all taxes when you file. For non-US creators, Google may withhold up to 24-30% of your earnings for US taxes unless you submit a W-8BEN form through AdSense.",
+  },
+  {
+    question: "Which country is best for YouTube creators tax-wise?",
+    answer:
+      "It depends on income level. At low income, the UK (100% retention at £12,000) and India (100% at ₹12 lakh with 44ADA) are most favorable. At mid-level income, India leads with 92% retention. At high income, India still offers better rates than most countries, though the 15% US withholding partially offsets this advantage.",
+  },
+  {
+    question:
+      "Why does India have lower YouTube taxes than other countries?",
+    answer:
+      "Two main reasons: (1) Presumptive taxation under Section 44ADA reduces taxable income by 50% automatically, and (2) the New Tax Regime offers lower marginal rates with an enhanced Section 87A rebate that eliminates tax for creators earning up to ₹12 lakh gross. However, India's 15% US treaty withholding rate is higher than 0% for UK, Germany, and Canada.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://takehomehub.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Compare YouTube Tax by Country",
+      item: "https://takehomehub.com/compare/youtube-tax-by-country",
+    },
+  ],
+};
+
 export default function ComparePage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <main className="prose mx-auto py-10 px-4">
       <h1>YouTube Withholding Rates by Country</h1>
       <p>
@@ -262,6 +333,16 @@ export default function ComparePage() {
           → YouTube Earnings After Tax Calculator
         </Link>
       </p>
+
+      <div className="mt-12 border-t pt-6 text-sm text-muted-foreground">
+        <p>
+          <strong>Sources:</strong> Data sourced from official government tax
+          authorities: IRS (US), Bundesfinanzministerium (Germany), CRA
+          (Canada), HMRC (UK), Income Tax Department of India. Last verified:
+          March 2026.
+        </p>
+      </div>
     </main>
+    </>
   );
 }
