@@ -4,6 +4,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import ScrollTopButton from "@/components/ScrollTopButton";
 import MobileMenu from "@/components/MobileMenu";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -56,8 +57,8 @@ export default function RootLayout({
       lang="en"
       className={`${lexend.variable} ${sourceSans.variable} h-full antialiased`}
     >
-      {/* GA4 disabled for debugging */}
       <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#020617]">
+        {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
         <nav className="sticky top-0 z-50 border-b border-[#E2E8F0] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 px-4 py-3">
           <div className="mx-auto max-w-4xl flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
