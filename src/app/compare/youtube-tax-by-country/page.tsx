@@ -81,7 +81,7 @@ export default function ComparePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-    <main className="prose mx-auto py-12 px-4 max-w-3xl">
+    <main className="prose mx-auto py-12 px-4 max-w-4xl w-full">
       <h1>YouTube Withholding Rates by Country</h1>
       <p>
         How much do YouTube creators actually take home after taxes? The answer
@@ -99,7 +99,8 @@ export default function ComparePage() {
         use Scenario B from each country guide.
       </p>
 
-      <table>
+      <div className="overflow-x-auto -mx-4 px-4">
+      <table className="min-w-full">
         <thead>
           <tr>
             <th>Country</th>
@@ -163,6 +164,7 @@ export default function ComparePage() {
           </tr>
         </tbody>
       </table>
+      </div>
 
       <p className="text-sm text-muted-foreground">
         Note: Different currencies make direct comparison complex. Retention
@@ -217,7 +219,8 @@ export default function ComparePage() {
         form submitted through Google AdSense determines how much is withheld:
       </p>
 
-      <table>
+      <div className="overflow-x-auto -mx-4 px-4">
+      <table className="min-w-full">
         <thead>
           <tr>
             <th>Situation</th>
@@ -248,6 +251,7 @@ export default function ComparePage() {
           </tr>
         </tbody>
       </table>
+      </div>
 
       <p>
         Submitting the W-8BEN takes about 10 minutes through your AdSense
