@@ -45,6 +45,9 @@ export default function Footer() {
             This site does not constitute tax advice. Consult a qualified
             professional for your situation.
           </p>
+          <p className="mt-3 text-[#CBD5E1]">
+            &copy; 2025 TakeHomeHub. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
