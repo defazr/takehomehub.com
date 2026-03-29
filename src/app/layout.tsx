@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  other: {
+    "google-adsense-account": "ca-pub-7976139023602789",
+  },
   openGraph: {
     title: "TakeHomeHub — YouTube Creator Taxes by Country",
     description:
