@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Lexend, Source_Sans_3 } from "next/font/google";
 import Link from "next/link";
 import Footer from "@/components/Footer";
@@ -57,22 +56,22 @@ export default function RootLayout({
       lang="en"
       className={`${lexend.variable} ${sourceSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#020617]">
+      <head>
         {GA_ID && (
           <>
-            <Script
+            <script
+              async
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
             />
-            <Script
-              id="ga4-init"
-              strategy="afterInteractive"
+            <script
               dangerouslySetInnerHTML={{
                 __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`,
               }}
             />
           </>
         )}
+      </head>
+      <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#020617]">
         <nav className="sticky top-0 z-50 border-b border-[#E2E8F0] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 px-4 py-3">
           <div className="mx-auto max-w-4xl flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
