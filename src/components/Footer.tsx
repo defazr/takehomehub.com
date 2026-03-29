@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
 
         {/* 4. Copyright */}
-        <p className="text-xs text-[#94A3B8] mt-8 text-center">
+        <p className="text-xs text-[#94A3B8] mt-8 pb-6 text-center">
           &copy; 2026 TakeHomeHub. All rights reserved.
         </p>
       </div>
