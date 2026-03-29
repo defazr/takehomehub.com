@@ -4,17 +4,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://takehomehub.com";
 
   return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/guides/tax/us`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/compare/youtube-tax-by-country`,
-      lastModified: new Date(),
-    },
+    { url: baseUrl, lastModified: new Date() },
+    { url: `${baseUrl}/guides/tax/us`, lastModified: new Date() },
+    { url: `${baseUrl}/guides/tax/germany`, lastModified: new Date() },
+    { url: `${baseUrl}/guides/tax/canada`, lastModified: new Date() },
+    { url: `${baseUrl}/guides/tax/uk`, lastModified: new Date() },
+    { url: `${baseUrl}/guides/tax/india`, lastModified: new Date() },
+    { url: `${baseUrl}/compare/youtube-tax-by-country`, lastModified: new Date() },
+    { url: `${baseUrl}/calculators/youtube-earnings-after-tax`, lastModified: new Date() },
   ];
 }

@@ -54,6 +54,17 @@ export default function Home() {
           → YouTube Withholding Rates by Country — Full Comparison Table
         </Link>
       </p>
+
+      <h2>Calculator</h2>
+      <p>
+        Enter your monthly income and country to estimate your take-home pay
+        instantly.
+      </p>
+      <p>
+        <Link href="/calculators/youtube-earnings-after-tax">
+          → YouTube Earnings After Tax Calculator
+        </Link>
+      </p>
     </main>
   );
 }
