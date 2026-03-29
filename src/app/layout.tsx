@@ -5,9 +5,11 @@ import Footer from "@/components/Footer";
 import ScrollTopButton from "@/components/ScrollTopButton";
 import MobileMenu from "@/components/MobileMenu";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleAdSense from "@/components/GoogleAdSense";
 import "./globals.css";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID;
 
 const lexend = Lexend({
   variable: "--font-heading",
@@ -74,6 +76,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#020617]">
         {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
+        {ADSENSE_ID && <GoogleAdSense pubId={ADSENSE_ID} />}
         <nav className="sticky top-0 z-50 border-b border-[#E2E8F0] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 px-4 py-3">
           <div className="mx-auto max-w-4xl flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
