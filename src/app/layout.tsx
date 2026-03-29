@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Lexend, Source_Sans_3 } from "next/font/google";
 import Link from "next/link";
+import Footer from "@/components/Footer";
+import ScrollTopButton from "@/components/ScrollTopButton";
+import MobileMenu from "@/components/MobileMenu";
 import "./globals.css";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -17,6 +20,11 @@ const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "TakeHomeHub — YouTube Creator Taxes by Country",
@@ -67,30 +75,35 @@ export default function RootLayout({
       )}
       <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#020617]">
         <nav className="sticky top-0 z-50 border-b border-[#E2E8F0] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 px-4 py-3">
-          <div className="mx-auto max-w-4xl flex items-center gap-6 text-sm">
-            <Link
-              href="/"
-              className="font-heading font-bold text-lg text-[#0F172A] hover:no-underline tracking-tight"
-            >
-              TakeHomeHub
-            </Link>
-            <div className="flex gap-5 font-medium text-[#475569]">
+          <div className="mx-auto max-w-4xl flex items-center justify-between text-sm">
+            <div className="flex items-center gap-6">
               <Link
-                href="/compare/youtube-tax-by-country"
-                className="hover:text-[#0F172A] transition-colors duration-200"
+                href="/"
+                className="font-heading font-bold text-lg text-[#0F172A] hover:no-underline tracking-tight"
               >
-                Compare
+                TakeHomeHub
               </Link>
-              <Link
-                href="/calculators/youtube-earnings-after-tax"
-                className="hover:text-[#0F172A] transition-colors duration-200"
-              >
-                Calculator
-              </Link>
+              <div className="hidden md:flex gap-5 font-medium text-[#475569]">
+                <Link
+                  href="/compare/youtube-tax-by-country"
+                  className="hover:text-[#0F172A] transition-colors duration-200"
+                >
+                  Compare
+                </Link>
+                <Link
+                  href="/calculators/youtube-earnings-after-tax"
+                  className="hover:text-[#0F172A] transition-colors duration-200"
+                >
+                  Calculator
+                </Link>
+              </div>
             </div>
+            <MobileMenu />
           </div>
         </nav>
         {children}
+        <Footer />
+        <ScrollTopButton />
       </body>
     </html>
   );
