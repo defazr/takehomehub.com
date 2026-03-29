@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getGuideBySlug, getAllGuides } from "@/lib/markdown";
 import CountryLinks from "@/components/CountryLinks";
@@ -8,6 +9,24 @@ import FAQAccordion from "@/components/FAQAccordion";
 export async function generateStaticParams() {
   const slugs = getAllGuides();
   return slugs.map((slug) => ({ country: slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ country: string }>;
+}): Promise<Metadata> {
+  const { country } = await params;
+  const guide = await getGuideBySlug(country);
+
+  if (!guide) {
+    return { title: "Not Found" };
+  }
+
+  return {
+    title: guide.frontmatter.title,
+    description: guide.frontmatter.description,
+  };
 }
 
 export default async function Page({
