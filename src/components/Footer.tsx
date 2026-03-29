@@ -36,7 +36,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-[#E2E8F0] text-xs text-[#94A3B8]">
+        <div className="mt-8 pt-6 border-t border-[#E2E8F0] text-center text-xs text-[#64748B]">
           <p>
             Data sourced from IRS, Bundesfinanzministerium, CRA, HMRC, and
             Income Tax Department of India. Last verified March 2026.
@@ -45,8 +45,8 @@ export default function Footer() {
             This site does not constitute tax advice. Consult a qualified
             professional for your situation.
           </p>
-          <p className="mt-3 text-[#CBD5E1]">
-            &copy; 2025 TakeHomeHub. All rights reserved.
+          <p className="mt-6 text-[#94A3B8]">
+            &copy; 2026 TakeHomeHub. All rights reserved.
           </p>
         </div>
       </div>
