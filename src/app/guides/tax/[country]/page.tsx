@@ -60,7 +60,7 @@ export default async function Page({
       name: item.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.answer,
+        text: item.answer.replace(/<[^>]*>/g, ""),
       },
     })),
   };
@@ -90,15 +90,22 @@ export default async function Page({
     ],
   };
 
+  const faqJsonLd = JSON.stringify(faqSchema)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e");
+  const breadcrumbJsonLd = JSON.stringify(breadcrumbSchema)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e");
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: faqJsonLd }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }}
       />
       <main className="prose mx-auto py-12 px-4 max-w-4xl w-full">
         <h1>{frontmatter.title}</h1>
