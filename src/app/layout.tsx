@@ -26,24 +26,39 @@ export const viewport = {
   initialScale: 1,
 };
 
+const siteUrl = "https://takehomehub.com";
+
 export const metadata: Metadata = {
   title: "TakeHomeHub — YouTube Creator Taxes by Country",
   description:
     "Understand how YouTube income is taxed globally. Compare tax rates, withholding, and take-home pay for YouTube creators across countries.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "TakeHomeHub — YouTube Creator Taxes by Country",
     description:
       "Compare YouTube tax rates, withholding, and take-home pay across the US, Germany, Canada, UK, and India.",
-    url: "https://takehomehub.com",
+    url: siteUrl,
     siteName: "TakeHomeHub",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "TakeHomeHub — YouTube Creator Taxes by Country",
     description:
       "Compare YouTube tax rates and take-home pay across 5 countries.",
+    images: [`${siteUrl}/og-image.png`],
   },
 };
 
