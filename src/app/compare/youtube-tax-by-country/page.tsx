@@ -80,6 +80,7 @@ const breadcrumbJsonLd = JSON.stringify(breadcrumbSchema)
 export default function ComparePage() {
   return (
     <>
+      {/* JSON-LD temporarily disabled for debugging
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqJsonLd }}
@@ -88,6 +89,7 @@ export default function ComparePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }}
       />
+      */}
     <main className="prose mx-auto py-12 px-4 max-w-4xl w-full">
       <h1>YouTube Withholding Rates by Country</h1>
       <p>
