@@ -3,11 +3,14 @@ import Link from "next/link";
 const footerLinks = [
   { href: "/compare/youtube-tax-by-country", label: "Compare" },
   { href: "/calculators/youtube-earnings-after-tax", label: "Calculator" },
+  { href: "/glossary", label: "Glossary" },
   { href: "/guides/tax/us", label: "US" },
   { href: "/guides/tax/germany", label: "Germany" },
   { href: "/guides/tax/canada", label: "Canada" },
   { href: "/guides/tax/uk", label: "UK" },
   { href: "/guides/tax/india", label: "India" },
+  { href: "/about", label: "About" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
 ];
 
 export default function Footer() {

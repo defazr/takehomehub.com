@@ -12,5 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/guides/tax/india`, lastModified: new Date() },
     { url: `${baseUrl}/compare/youtube-tax-by-country`, lastModified: new Date() },
     { url: `${baseUrl}/calculators/youtube-earnings-after-tax`, lastModified: new Date() },
+    { url: `${baseUrl}/glossary`, lastModified: new Date() },
+    { url: `${baseUrl}/about`, lastModified: new Date() },
+    { url: `${baseUrl}/privacy-policy`, lastModified: new Date() },
   ];
 }
