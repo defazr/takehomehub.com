@@ -4,7 +4,6 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import ScrollTopButton from "@/components/ScrollTopButton";
 import MobileMenu from "@/components/MobileMenu";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 import GoogleAdSense from "@/components/GoogleAdSense";
 import "./globals.css";
 
@@ -78,7 +77,24 @@ export default function RootLayout({
       className={`${lexend.variable} ${sourceSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#020617]">
-        {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
+        {GA_ID && (
+          <>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}');
+                `,
+              }}
+            />
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            />
+          </>
+        )}
         {ADSENSE_ID && <GoogleAdSense pubId={ADSENSE_ID} />}
         <nav className="sticky top-0 z-50 border-b border-[#E2E8F0] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 px-4 py-3">
           <div className="mx-auto max-w-4xl flex items-center justify-between text-sm">
