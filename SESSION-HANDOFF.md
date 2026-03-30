@@ -6,26 +6,40 @@
 
 1. 이 파일 읽기
 2. `PROJECT_SPEC.md` 읽기
-3. 최신 핸드오프: `GPT-HANDOFF-2026-03-29-v6.md`
+3. 최신 핸드오프: `GPT-HANDOFF-2026-03-30.md`
 
 ---
 
-## 현재 상태 (2026-03-29)
+## 현재 상태 (2026-03-30)
 
 - **라이브**: https://takehomehub.com
 - **Console 에러**: 0
 - **11 페이지**
-- **Git**: `87ec7d1` on main
+- **Git**: main
 - **Phase 16**: 완료 (HTTP 200 = 11/11, 404 = 0, 링크 정상)
+- **GA4**: 정상 동작 (body inline script 방식)
 - **AdSense**: ads.txt + meta tag 배포됨 → Google 검토 요청 가능 상태
+- **프로젝트 단계**: BUILD 종료 → 운영/관찰 모드 진입
+
+---
+
+## 2026-03-30 — GA4 안정화
+
+- GA4 초기화 방식 변경 (useEffect → body inline script)
+- collect 요청 정상화
+- GoogleAnalytics.tsx 삭제
+- GA_ID.trim() 적용
+- build clean 확보
 
 ---
 
 ## 즉시 해야 할 것
 
-### AdSense 승인 대기
-- Google AdSense에서 "검토 요청" 클릭
-- 승인 후 운영 전략 단계 진입
+### 운영 관찰 모드
+- AdSense 승인 대기
+- GSC 인덱싱 대기 (Day 1)
+- GA4 실시간 데이터 모니터링
+- 구조 변경 금지
 
 ---
 
@@ -33,7 +47,7 @@
 
 | 제약 | 설명 |
 |---|---|
-| **next/script 사용 금지** | appendChild 에러. `GoogleAnalytics.tsx` / `GoogleAdSense.tsx` 패턴 사용 |
+| **next/script 사용 금지** | appendChild 에러. GA4는 body inline script, AdSense는 `GoogleAdSense.tsx` useEffect 패턴 |
 | shadcn/ui | Base UI 기반 (Radix 금지) |
 | Tailwind | v4, `@plugin` 방식 |
 | Next.js | v16, `params` = Promise |
@@ -55,7 +69,7 @@
 
 | 파일 | 역할 |
 |---|---|
-| `src/components/GoogleAnalytics.tsx` | GA4 (useEffect) |
+| `src/app/layout.tsx` | GA4 inline script (body 최상단) |
 | `src/components/GoogleAdSense.tsx` | AdSense (useEffect) — 건드리지 않는다 |
 | `src/components/Footer.tsx` | 3단 Footer |
 | `src/components/MobileMenu.tsx` | 햄버거 (Sheet/Base UI) |
