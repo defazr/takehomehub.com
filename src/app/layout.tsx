@@ -8,8 +8,8 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import GoogleAdSense from "@/components/GoogleAdSense";
 import "./globals.css";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID?.trim();
+const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim();
 
 const lexend = Lexend({
   variable: "--font-heading",
