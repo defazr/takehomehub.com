@@ -6,11 +6,11 @@
 
 1. 이 파일 읽기
 2. `PROJECT_SPEC.md` 읽기
-3. 최신 핸드오프: `GPT-HANDOFF-2026-03-30.md`
+3. 최신 핸드오프: `GPT-HANDOFF-2026-04-02.md`
 
 ---
 
-## 현재 상태 (2026-03-30)
+## 현재 상태 (2026-04-02)
 
 - **라이브**: https://takehomehub.com
 - **Console 에러**: 0
@@ -20,8 +20,16 @@
 - **GA4**: 정상 동작 (body inline script 방식)
 - **AdSense**: ads.txt + meta tag 배포됨 → Google 검토 요청 가능 상태
 - **프로젝트 단계**: BUILD 종료 → 운영/관찰 모드 진입
+- **배포**: 일시 중단 (ISR Write 초과 관찰)
 
 ---
+
+## 2026-04-02 — 301 Redirect + ISR 관찰
+
+- 301 redirect 3개 추가 (next.config.ts)
+- ISR Write 초과 상태 기록 (계정 shared)
+- 배포 일시 중단 결정
+- build clean 상태 유지
 
 ## 2026-03-30 — GA4 안정화
 
@@ -35,11 +43,12 @@
 
 ## 즉시 해야 할 것
 
-### 운영 관찰 모드
-- AdSense 승인 대기
-- GSC 인덱싱 대기 (Day 1)
-- GA4 실시간 데이터 모니터링
-- 구조 변경 금지
+### STEP B (04-03 예정)
+- Vercel ISR Writes 상태 확인
+- git push + vercel deploy
+- Redirect 3개 URL 검증
+- GA4 실시간 유지 확인
+- GSC URL 검사 + 재크롤 요청
 
 ---
 
