@@ -16,20 +16,24 @@
 - **Console 에러**: 0
 - **11 페이지**
 - **Git**: main
-- **Phase 16**: 완료 (HTTP 200 = 11/11, 404 = 0, 링크 정상)
 - **GA4**: 정상 동작 (body inline script 방식)
-- **AdSense**: ads.txt + meta tag 배포됨 → Google 검토 요청 가능 상태
-- **프로젝트 단계**: BUILD 종료 → 운영/관찰 모드 진입
-- **배포**: 일시 중단 (ISR Write 초과 관찰)
+- **AdSense**: ads.txt + meta tag 배포됨 → 승인 대기
+- **GSC**: 런칭 4일차, 노출 60→102→120, 첫 클릭 발생
+- **Redirect**: 3개 배포 + 검증 완료
+- **Vercel**: Pro 결제 완료 (ISR 한도 해소)
+- **프로젝트 단계**: 콘텐츠 확장 준비
 
 ---
 
-## 2026-04-02 — 301 Redirect + ISR 관찰
+## 2026-04-02 — Phase 16 + AdSense + GA4 + Redirect
 
-- 301 redirect 3개 추가 (next.config.ts)
-- ISR Write 초과 상태 기록 (계정 shared)
-- 배포 일시 중단 결정
-- build clean 상태 유지
+- Phase 16 site integrity check 완료 (11/11 = 200, 404 = 0)
+- AdSense 소유권 확인: ads.txt + meta tag 배포
+- GA4 collect 미전송 해결: useEffect → body inline script 전환
+- GoogleAnalytics.tsx 삭제
+- env var .trim() 적용
+- 301 redirect 3개 추가 + 배포 + 검증 완료
+- 코드 구조 조사 완료 (compare=TSX 직접, sitemap=수동, 파서=하드코딩)
 
 ## 2026-03-30 — GA4 안정화
 
@@ -43,12 +47,13 @@
 
 ## 즉시 해야 할 것
 
-### STEP B (04-03 예정)
-- Vercel ISR Writes 상태 확인
-- git push + vercel deploy
-- Redirect 3개 URL 검증
-- GA4 실시간 유지 확인
-- GSC URL 검사 + 재크롤 요청
+### 콘텐츠 3개 작성 (내일~)
+
+1. `/compare/us-vs-germany-youtube-tax` — TSX 직접, 800~1200단어
+2. `/compare/us-vs-uk-youtube-tax` — TSX 직접, 800~1200단어
+3. `/guides/do-youtubers-pay-taxes-us` — TSX 직접, 800~1200단어
+
+규칙: 기존 페이지 수정 금지, sitemap.ts 수동 추가, 내부 링크 2~3개 + 계산기 링크
 
 ---
 
@@ -62,6 +67,9 @@
 | Next.js | v16, `params` = Promise |
 | prose | `max-width: none` |
 | 디자인 | AG Kit: #0F172A / #1E3A8A / #CA8A04 / Lexend / Source Sans 3 |
+| compare 페이지 | TSX 직접 작성 (마크다운 아님) |
+| sitemap | 수동 URL 나열 (자동 아님) |
+| 마크다운 파서 | `content/guides/tax` 하드코딩 — 수정 금지 |
 
 ---
 
@@ -78,11 +86,14 @@
 
 | 파일 | 역할 |
 |---|---|
-| `src/app/layout.tsx` | GA4 inline script (body 최상단) |
+| `src/app/layout.tsx` | GA4 inline script (body 최상단) + AdSense meta tag |
 | `src/components/GoogleAdSense.tsx` | AdSense (useEffect) — 건드리지 않는다 |
 | `src/components/Footer.tsx` | 3단 Footer |
 | `src/components/MobileMenu.tsx` | 햄버거 (Sheet/Base UI) |
 | `src/components/TaxCalculator.tsx` | 계산기 + 국가 가이드 링크 |
+| `src/app/compare/youtube-tax-by-country/page.tsx` | 비교 페이지 (TSX 직접) |
+| `src/app/sitemap.ts` | sitemap (수동 URL) |
+| `next.config.ts` | redirects 3개 |
 | `public/og-image.png` | OG 이미지 (1200x630) |
 | `public/favicon.ico` | Favicon |
 | `public/ads.txt` | AdSense 소유권 확인용 |
