@@ -178,7 +178,35 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID?.trim();
 
 ---
 
+---
+
+## 2026-04-05 — Content Expansion (Phase 1 Complete)
+
+- Added 3 pages:
+  - /compare/us-vs-germany-youtube-tax
+  - /compare/us-vs-uk-youtube-tax
+  - /guides/do-youtubers-pay-taxes-us
+
+- Total pages: 14
+- All pages TSX-based (no markdown change)
+- Internal linking: forward only (no reverse yet)
+- Sitemap updated (14 URLs)
+
+## Status
+
+- Indexing in progress
+- Impressions increasing
+- No structural changes made (SSOT preserved)
+
+## Next Phase
+
+- Observe GSC data (7 days)
+- No new content until signal confirmed
+- 홈페이지 수정 금지 (자연 유입 데이터 왜곡 방지)
+- 역방향 링크 추가 금지
+
+---
+
 ## 10. 한 줄 요약
 
-→ Phase 16 완료 + AdSense/GA4 해결 + redirect 배포 + 콘텐츠 확장 계획 확정
-→ 내일부터 콘텐츠 작성 시작
+→ 콘텐츠 3개 배포 완료 (14페이지) → 7일 관찰 모드 진입

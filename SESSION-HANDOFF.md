@@ -14,14 +14,14 @@
 
 - **라이브**: https://takehomehub.com
 - **Console 에러**: 0
-- **11 페이지**
+- **14 페이지**
 - **Git**: main
 - **GA4**: 정상 동작 (body inline script 방식)
 - **AdSense**: ads.txt + meta tag 배포됨 → 승인 대기
 - **GSC**: 런칭 4일차, 노출 60→102→120, 첫 클릭 발생
 - **Redirect**: 3개 배포 + 검증 완료
 - **Vercel**: Pro 결제 완료 (ISR 한도 해소)
-- **프로젝트 단계**: 콘텐츠 확장 준비
+- **프로젝트 단계**: 7일 관찰 모드 (04-05 ~ 04-12)
 
 ---
 
@@ -45,15 +45,24 @@
 
 ---
 
+## 2026-04-05 — Content Expansion Complete
+
+- 콘텐츠 3개 배포 완료 (총 14페이지)
+  - `/compare/us-vs-germany-youtube-tax`
+  - `/compare/us-vs-uk-youtube-tax`
+  - `/guides/do-youtubers-pay-taxes-us`
+- 내부 링크: forward only (역방향 미추가 — 의도적)
+- 홈페이지 수정 안 함 (자연 유입 데이터 측정 위해)
+
+---
+
 ## 즉시 해야 할 것
 
-### 콘텐츠 3개 작성 (내일~)
-
-1. `/compare/us-vs-germany-youtube-tax` — TSX 직접, 800~1200단어
-2. `/compare/us-vs-uk-youtube-tax` — TSX 직접, 800~1200단어
-3. `/guides/do-youtubers-pay-taxes-us` — TSX 직접, 800~1200단어
-
-규칙: 기존 페이지 수정 금지, sitemap.ts 수동 추가, 내부 링크 2~3개 + 계산기 링크
+### 7일 관찰 모드 (04-05 ~ 04-12)
+- GSC impressions/clicks 모니터링
+- 어떤 페이지가 뜨는지 확인
+- 홈 수정 금지, 역방향 링크 금지, 추가 콘텐츠 금지
+- 데이터 기반으로 다음 방향 결정
 
 ---
 
