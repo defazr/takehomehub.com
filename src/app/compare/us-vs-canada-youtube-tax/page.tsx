@@ -139,7 +139,7 @@ export default function USvsCanadaPage() {
           <tbody>
             <tr>
               <td>Gross income</td>
-              <td>$60,000 USD</td>
+              <td>$60,000</td>
               <td>C$90,000</td>
             </tr>
             <tr>

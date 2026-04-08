@@ -276,7 +276,7 @@ export default function ComparePage() {
         India has the lowest effective tax rate for YouTube creators, primarily
         due to presumptive taxation under Section 44ADA, which allows creators
         to declare only 50% of gross receipts as taxable profit. At ₹60 lakh
-        annual income (~$7,200 USD/month), the effective rate is only about 8%.
+        annual income (~$7,200/month), the effective rate is only about 8%.
       </p>
 
       <p>

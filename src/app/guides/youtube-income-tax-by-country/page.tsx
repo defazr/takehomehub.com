@@ -174,7 +174,7 @@ export default function YouTubeIncomeTaxByCountryPage() {
         US creators are classified as self-employed and face a 15.3%
         self-employment tax (Social Security + Medicare) on top of federal
         income tax (10%&ndash;37%). At mid-level incomes, SE tax accounts for
-        nearly two-thirds of the total burden. The standard deduction ($15,750
+        nearly two-thirds of the total burden. The standard deduction ($15,000
         in 2025) and the potential Qualified Business Income (QBI) deduction
         of up to 20% provide some relief, but the combined federal rate still
         reaches roughly 22%.

@@ -168,7 +168,7 @@ export default function HowMuchTaxPage() {
 
       <p>
         No other country in our comparison offers anything equivalent. The US
-        provides a standard deduction ($15,750 in 2025) and allows business
+        provides a standard deduction ($15,000 in 2025) and allows business
         expense deductions, but creators must document every claim. Germany
         allows expense deductions but requires detailed bookkeeping. Canada
         and the UK follow similar documentation-heavy approaches.
