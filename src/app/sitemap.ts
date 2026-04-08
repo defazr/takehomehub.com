@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/compare/us-vs-canada-youtube-tax`, lastModified: new Date() },
     { url: `${baseUrl}/compare/uk-vs-germany-youtube-tax`, lastModified: new Date() },
     { url: `${baseUrl}/compare/germany-vs-canada-youtube-tax`, lastModified: new Date() },
+    { url: `${baseUrl}/compare/uk-vs-canada-youtube-tax`, lastModified: new Date() },
     { url: `${baseUrl}/calculators/youtube-earnings-after-tax`, lastModified: new Date() },
     { url: `${baseUrl}/guides/do-youtubers-pay-taxes-us`, lastModified: new Date() },
     { url: `${baseUrl}/glossary`, lastModified: new Date() },
