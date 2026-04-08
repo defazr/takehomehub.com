@@ -6,22 +6,22 @@
 
 1. 이 파일 읽기
 2. `PROJECT_SPEC.md` 읽기
-3. 최신 핸드오프: `GPT-HANDOFF-2026-04-02.md`
+3. 최신 핸드오프: `GPT-HANDOFF-2026-04-08.md`
 
 ---
 
-## 현재 상태 (2026-04-02)
+## 현재 상태 (2026-04-08)
 
 - **라이브**: https://takehomehub.com
 - **Console 에러**: 0
-- **14 페이지**
+- **16 페이지**
 - **Git**: main
 - **GA4**: 정상 동작 (body inline script 방식)
 - **AdSense**: ads.txt + meta tag 배포됨 → 승인 대기
-- **GSC**: 런칭 4일차, 노출 60→102→120, 첫 클릭 발생
+- **GSC**: 노출 증가 중
 - **Redirect**: 3개 배포 + 검증 완료
-- **Vercel**: Pro 결제 완료 (ISR 한도 해소)
-- **프로젝트 단계**: 7일 관찰 모드 (04-05 ~ 04-12)
+- **Vercel**: Pro 결제 완료
+- **프로젝트 단계**: 비교 콘텐츠 확장 중
 
 ---
 
@@ -45,24 +45,26 @@
 
 ---
 
-## 2026-04-05 — Content Expansion Complete
+## 2026-04-08 — 비교 콘텐츠 확장
 
-- 콘텐츠 3개 배포 완료 (총 14페이지)
+- US vs Canada 배포 (`/compare/us-vs-canada-youtube-tax`)
+- UK vs Germany 배포 (`/compare/uk-vs-germany-youtube-tax`)
+- 총 16페이지
+
+## 2026-04-05 — Content Expansion Phase 1
+
+- 콘텐츠 3개 배포
   - `/compare/us-vs-germany-youtube-tax`
   - `/compare/us-vs-uk-youtube-tax`
   - `/guides/do-youtubers-pay-taxes-us`
-- 내부 링크: forward only (역방향 미추가 — 의도적)
-- 홈페이지 수정 안 함 (자연 유입 데이터 측정 위해)
 
 ---
 
 ## 즉시 해야 할 것
 
-### 7일 관찰 모드 (04-05 ~ 04-12)
-- GSC impressions/clicks 모니터링
-- 어떤 페이지가 뜨는지 확인
-- 홈 수정 금지, 역방향 링크 금지, 추가 콘텐츠 금지
-- 데이터 기반으로 다음 방향 결정
+### Germany vs Canada 비교 페이지 대기
+- 지시서 오면 바로 실행
+- 패턴 동일: 수치 검증 → TSX → sitemap → 빌드 → 배포
 
 ---
 
