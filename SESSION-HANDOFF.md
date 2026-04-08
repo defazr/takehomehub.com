@@ -14,14 +14,14 @@
 
 - **라이브**: https://takehomehub.com
 - **Console 에러**: 0
-- **16 페이지**
+- **19 페이지**
 - **Git**: main
 - **GA4**: 정상 동작 (body inline script 방식)
 - **AdSense**: ads.txt + meta tag 배포됨 → 승인 대기
 - **GSC**: 노출 증가 중
 - **Redirect**: 3개 배포 + 검증 완료
 - **Vercel**: Pro 결제 완료
-- **프로젝트 단계**: 비교 콘텐츠 확장 중
+- **프로젝트 단계**: 비교 완료 → 롱테일 콘텐츠 진입
 
 ---
 
@@ -45,11 +45,11 @@
 
 ---
 
-## 2026-04-08 — 비교 콘텐츠 확장
+## 2026-04-08 — 비교 콘텐츠 전부 완료
 
-- US vs Canada 배포 (`/compare/us-vs-canada-youtube-tax`)
-- UK vs Germany 배포 (`/compare/uk-vs-germany-youtube-tax`)
-- 총 16페이지
+- US vs Canada, UK vs Germany, Germany vs Canada, UK vs Canada, US vs India 배포
+- 비교 페이지 7개 + 롱테일 1개 = 총 19페이지
+- 비교 콘텐츠 완료 → 롱테일 단계 진입
 
 ## 2026-04-05 — Content Expansion Phase 1
 
@@ -62,9 +62,9 @@
 
 ## 즉시 해야 할 것
 
-### Germany vs Canada 비교 페이지 대기
-- 지시서 오면 바로 실행
-- 패턴 동일: 수치 검증 → TSX → sitemap → 빌드 → 배포
+### 롱테일 콘텐츠 추가 (지시서 대기)
+- 비교 콘텐츠는 전부 완료
+- 패턴 동일: TSX 직접 → sitemap 수동 → 빌드 → 배포
 
 ---
 
