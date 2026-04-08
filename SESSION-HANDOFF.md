@@ -21,17 +21,16 @@
 - **GSC**: 노출 증가 중
 - **Redirect**: 3개 배포 + 검증 완료
 - **Vercel**: Pro 결제 완료
-- **프로젝트 단계**: 전체 구조 완성 → 관찰 모드
+- **프로젝트 단계**: 전체 구조 완성 + QA 통과 → 운영 모드
 
 ---
 
-## 2026-04-08 — 전체 구조 완성
+## 2026-04-08 — 전체 구조 완성 + QA 통과
 
-- 비교 4개 추가: US vs Canada/India, UK vs Germany/Canada, Germany vs Canada
-- 롱테일 3개 추가: How Much Tax, Do YouTubers Pay Taxes Germany, YouTube Income Tax by Country
-- 허브 1개: YouTube Tax Rates Comparison
-- 총 23페이지, sitemap 23개 URL
-- 내부 링크: 허브에서 21개 링크로 전체 연결
+- 비교 4개 + 롱테일 3개 + 허브 1개 배포 (총 23페이지)
+- QA 전수 검사: 수치 PASS, 링크 PASS, SEO PASS
+- SSOT 수정: $15,750→$15,000 (2곳) + 통화 중복 제거 (2곳)
+- 카니발리제이션 Cluster A 감지 → GSC 데이터 관찰 후 판단
 
 ## 2026-04-05 — Content Expansion Phase 1
 
@@ -49,10 +48,11 @@
 
 ## 즉시 해야 할 것
 
-### 관찰 모드
-- GSC 데이터 모니터링
-- 추가 콘텐츠 없음 (구조 완성)
-- 기존 페이지 수정 금지
+### 운영 모드 — GSC 관찰
+- 구조 완성 + QA 통과. 추가 콘텐츠 없음.
+- GSC 노출/클릭/순위 모니터링
+- 카니발리제이션 Cluster A 감시 (동일 키워드에 2+ URL 노출 시 개입)
+- 기존 페이지 수정 금지, canonical 추가 금지
 - 데이터 기반으로 다음 방향 결정
 
 ---
