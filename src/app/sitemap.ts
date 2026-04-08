@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/guides/how-much-tax-do-youtubers-pay`, lastModified: new Date() },
     { url: `${baseUrl}/guides/do-youtubers-pay-taxes-germany`, lastModified: new Date() },
     { url: `${baseUrl}/guides/youtube-income-tax-by-country`, lastModified: new Date() },
+    { url: `${baseUrl}/guides/youtube-tax-rates-comparison`, lastModified: new Date() },
     { url: `${baseUrl}/glossary`, lastModified: new Date() },
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/privacy-policy`, lastModified: new Date() },
