@@ -299,11 +299,17 @@ Not exactly like the US system. In Germany, the Finanzamt may set quarterly prep
 Tax rules vary dramatically by country. A creator earning the same amount in the US, UK, or India will have a very different take-home amount.
 
 → [Compare Germany vs US — Side-by-Side](/compare/us-vs-germany-youtube-tax)
+
 → [YouTube Tax USA Guide](/guides/tax/us)
+
 → [YouTube Tax Canada Guide](/guides/tax/canada)
+
 → [YouTube Tax UK Guide](/guides/tax/uk)
+
 → [YouTube Tax India Guide](/guides/tax/india)
+
 → [Tax Withholding Rates by Country — Full Comparison Table](/compare/youtube-tax-by-country)
+
 → [YouTube Earnings After Tax Calculator](/calculators/youtube-earnings-after-tax)
 
 ---
