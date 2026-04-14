@@ -109,6 +109,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Top Comparisons */}
+      <section className="py-12 px-4 border-t border-[#E2E8F0]">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="font-heading text-2xl font-semibold text-[#0F172A] text-center mb-8">
+            Top YouTube Tax Comparisons
+          </h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Link
+              href="/compare/us-vs-germany-youtube-tax"
+              className="group block rounded-lg border border-[#E2E8F0] bg-white p-4 hover:shadow-md hover:border-[#CBD5E1] transition-all duration-200"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-lg">🇺🇸</span>
+                <span className="text-[#94A3B8] text-sm">vs</span>
+                <span className="text-lg">🇩🇪</span>
+              </div>
+              <div className="font-heading font-semibold text-[#0F172A] group-hover:text-[#1E3A8A] transition-colors text-sm">
+                US vs Germany
+              </div>
+              <div className="text-xs text-[#64748B] mt-1">
+                Compare take-home pay
+              </div>
+            </Link>
+            <Link
+              href="/compare/us-vs-canada-youtube-tax"
+              className="group block rounded-lg border border-[#E2E8F0] bg-white p-4 hover:shadow-md hover:border-[#CBD5E1] transition-all duration-200"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-lg">🇺🇸</span>
+                <span className="text-[#94A3B8] text-sm">vs</span>
+                <span className="text-lg">🇨🇦</span>
+              </div>
+              <div className="font-heading font-semibold text-[#0F172A] group-hover:text-[#1E3A8A] transition-colors text-sm">
+                US vs Canada
+              </div>
+              <div className="text-xs text-[#64748B] mt-1">
+                Compare take-home pay
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Compare CTA */}
       <section className="bg-[#F1F5F9] py-14 px-4">
         <div className="mx-auto max-w-4xl text-center">
