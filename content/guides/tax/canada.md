@@ -288,11 +288,18 @@ Self-employed individuals have until June 15 to file their T1 return, but any ta
 
 Tax rules vary dramatically by country. A creator earning the same amount in the US, Germany, or India will have a very different take-home amount.
 
+→ [Compare US vs Canada — Side-by-Side](/compare/us-vs-canada-youtube-tax)
+
 → [YouTube Tax USA Guide](/guides/tax/us)
+
 → [YouTube Tax Germany Guide](/guides/tax/germany)
+
 → [YouTube Tax UK Guide](/guides/tax/uk)
+
 → [YouTube Tax India Guide](/guides/tax/india)
+
 → [Tax Withholding Rates by Country — Full Comparison Table](/compare/youtube-tax-by-country)
+
 → [YouTube Earnings After Tax Calculator](/calculators/youtube-earnings-after-tax)
 
 ---

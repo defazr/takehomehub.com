@@ -260,11 +260,18 @@ For the 2025-2026 tax year, the online filing deadline is 31 January 2027. Payme
 
 Tax rules vary dramatically by country. A creator earning the same amount in the US, Germany, or Canada will have a very different take-home amount.
 
+→ [Compare US vs UK — Side-by-Side](/compare/us-vs-uk-youtube-tax)
+
 → [YouTube Tax USA Guide](/guides/tax/us)
+
 → [YouTube Tax Germany Guide](/guides/tax/germany)
+
 → [YouTube Tax Canada Guide](/guides/tax/canada)
+
 → [YouTube Tax India Guide](/guides/tax/india)
+
 → [Tax Withholding Rates by Country — Full Comparison Table](/compare/youtube-tax-by-country)
+
 → [YouTube Earnings After Tax Calculator](/calculators/youtube-earnings-after-tax)
 
 ---

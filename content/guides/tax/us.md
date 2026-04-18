@@ -253,11 +253,18 @@ W-8BEN is a tax form that non-U.S. individuals submit to Google through their Ad
 
 Tax rules vary dramatically by country. A creator earning the same amount in the UK, Canada, or India will have a very different take-home amount.
 
+→ [Compare US vs Germany — Side-by-Side](/compare/us-vs-germany-youtube-tax)
+
 → [YouTube Tax UK Guide](/guides/tax/uk)
+
 → [YouTube Tax Canada Guide](/guides/tax/canada)
+
 → [YouTube Tax India Guide](/guides/tax/india)
+
 → [YouTube Tax Germany Guide](/guides/tax/germany)
+
 → [Tax Withholding Rates by Country — Full Comparison Table](/compare/youtube-tax-by-country)
+
 → [YouTube Earnings After Tax Calculator](/calculators/youtube-earnings-after-tax)
 
 ---

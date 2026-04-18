@@ -115,7 +115,7 @@ export default function Home() {
           <h2 className="font-heading text-2xl font-semibold text-[#0F172A] text-center mb-8">
             Top YouTube Tax Comparisons
           </h2>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/compare/us-vs-germany-youtube-tax"
               className="group block rounded-lg border border-[#E2E8F0] bg-white p-4 hover:shadow-md hover:border-[#CBD5E1] transition-all duration-200"
@@ -143,6 +143,22 @@ export default function Home() {
               </div>
               <div className="font-heading font-semibold text-[#0F172A] group-hover:text-[#1E3A8A] transition-colors text-sm">
                 US vs Canada
+              </div>
+              <div className="text-xs text-[#64748B] mt-1">
+                Compare take-home pay
+              </div>
+            </Link>
+            <Link
+              href="/compare/us-vs-uk-youtube-tax"
+              className="group block rounded-lg border border-[#E2E8F0] bg-white p-4 hover:shadow-md hover:border-[#CBD5E1] transition-all duration-200"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-lg">🇺🇸</span>
+                <span className="text-[#94A3B8] text-sm">vs</span>
+                <span className="text-lg">🇬🇧</span>
+              </div>
+              <div className="font-heading font-semibold text-[#0F172A] group-hover:text-[#1E3A8A] transition-colors text-sm">
+                US vs UK
               </div>
               <div className="text-xs text-[#64748B] mt-1">
                 Compare take-home pay
