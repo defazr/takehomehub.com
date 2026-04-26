@@ -118,6 +118,12 @@ export default function RootLayout({
                 >
                   Calculator
                 </Link>
+                <Link
+                  href="/glossary"
+                  className="hover:text-[#0F172A] transition-colors duration-200"
+                >
+                  Glossary
+                </Link>
               </div>
             </div>
             <MobileMenu />

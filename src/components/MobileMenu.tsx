@@ -18,6 +18,7 @@ const menuItems = [
   { href: "/guides/tax/canada", label: "Canada Guide" },
   { href: "/guides/tax/uk", label: "UK Guide" },
   { href: "/guides/tax/india", label: "India Guide" },
+  { href: "/glossary", label: "Glossary" },
 ];
 
 export default function MobileMenu() {
