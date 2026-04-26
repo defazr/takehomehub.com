@@ -218,6 +218,11 @@ export default function DoYouTubersPayTaxesGermanyPage() {
         preparing for digital record-keeping requirements.
       </p>
 
+      <p>
+        For rates, thresholds, and step-by-step filing details, see the full{" "}
+        <Link href="/guides/tax/germany">YouTube Tax in Germany Guide</Link>.
+      </p>
+
       <h2>How Does Germany Compare to Other Countries?</h2>
 
       <p>
